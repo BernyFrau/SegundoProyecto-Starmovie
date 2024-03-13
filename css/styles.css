@@ -160,11 +160,18 @@ margin-right: 10px;
 
 .video-wrapper iframe {
   width: 100%;
-  height: 300px; /* Altura deseada de los videos */
+  height: 300px; /* Altura videos */
 }
 
 @media screen and (max-width: 600px) {
   .video-wrapper {
       width: 100%; /* En dispositivos móviles, ocupa todo el ancho */
   }
+}
+
+main {
+  background-image: url('https://1.bp.blogspot.com/-VbR_wNi4rd0/Ujelxl5LecI/AAAAAAAAMHA/vy_jsx9KVK8/s1600/Descargar+Pack+Increibles+fotos+de+vehiculos+HD+%25284%2529.jpg'); 
+  background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  
 }
