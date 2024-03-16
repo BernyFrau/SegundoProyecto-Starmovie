@@ -1,80 +1,46 @@
-// Función para abrir el modal
-function openModal() {
-  $('#myModal').modal('show');
-}
 
-  // Función para guardar la película/serie
-  function guardarPelicula() {
-    const titulo = document.getElementById("titulo").value;
-    const director = document.getElementById("director").value;
-    const anio = document.getElementById("anio").value;}
+const titulob = document.getElementById("titulo");
+const directorb = document.getElementById("director");
+const aniob = document.getElementById("anio");
+const buttonguardar=document.getElementById("guardarpelicula")
 
-    if (titulo && director && anio) {
-        const pelicula = {
-            titulo: titulo,
-            director: director,
-            anio: anio
-        };
+let pelicula= new Object;
 
-        // Obtener las películas almacenadas en localStorage
-        let peliculas = JSON.parse(localStorage.getItem('peliculas')) || [];
+let titulo="";
+let director="";
+let anio="";
+
+
+
+titulob.addEventListener("change",(e)=>{titulo=e.target.value});
+directorb.addEventListener("change",(e)=>{director=e.target.value});
+aniob.addEventListener("change",(e)=>{anio=e.target.value});
+
+buttonguardar.addEventListener("click",(e)=>{
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    pelicula.titulo=titulo;
+    pelicula.director=director;
+    pelicula.anio=anio;
+
+
+    let peliculas=JSON.parse(localStorage.getItem("peliculas"))
+   
+
+    if(peliculas===null){
+        localStorage.setItem("peliculas",JSON.stringify([pelicula]))
+    }else{
         peliculas.push(pelicula);
-
-        // Guardar las películas actualizadas en localStorage
-        localStorage.setItem('peliculas', JSON.stringify(peliculas));
-
-        // Cerrar el modal después de guardar
-        // $('#modalAgregarEditar').modal('hide');
-
-        // Actualizar la lista de películas
-        actualizarListaPeliculas();
-    } else 
-        alert("Por favor, completa todos los campos")
-
-// Función para guardar la película/serie
-function guardarPelicula() {
-    const titulo = document.getElementById("titulo").value;
-    const director = document.getElementById("director").value;
-    const anio = document.getElementById("anio").value;
-
-    if (titulo && director && anio) {
-        const pelicula = {
-            titulo: titulo,
-            director: director,
-            anio: anio
-        };
-
-        // Obtener las películas almacenadas en localStorage
-        let peliculas = JSON.parse(localStorage.getItem('peliculas')) || [];
-        peliculas.push(pelicula);
-
-        // Guardar las películas actualizadas en localStorage
-        localStorage.setItem('peliculas', JSON.stringify(peliculas));
-
-        // Cerrar el modal después de guardar
-        // $('#modalAgregarEditar').modal('hide');
-
-        // Actualizar la lista de películas
-        actualizarListaPeliculas();
-    } else {
-        alert("Por favor, completa todos los campos.");
+        localStorage.setItem("peliculas",JSON.stringify(peliculas))
     }
-}
+})
 
-// Función para actualizar la lista de películas
-function actualizarListaPeliculas() {
-    const peliculas = JSON.parse(localStorage.getItem('peliculas')) || [];
-    const listaPeliculas = document.getElementById("peliculas");
-    listaPeliculas.innerHTML = "";
+    
+    
 
-    peliculas.forEach((pelicula, index) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = `${pelicula.titulo} - Dirigida por ${pelicula.director}, ${pelicula.anio}`;
-        listaPeliculas.appendChild(listItem);
-    });
-}
 
-// Mostrar las películas al cargar la página
-window.onload = function() {
-    actualizarListaPeliculas();
-};
+
+
+

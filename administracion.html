@@ -66,41 +66,29 @@
   <div class="container">
     <h1>Administracion</h1>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarEditar">Agregar Película/Serie</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarEditar">Agregar Película/Serie</button>
 
     <div class="modal fade" id="modalAgregarEditar" tabindex="-1" role="dialog" aria-labelledby="modalAgregarEditarLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    
-              
-<h5 class="modal-title" id="modalAgregarEditarLabel">Agregar/Editar Película/Serie</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        
-                  
-<span aria-hidden="true">&times;</span>
-                    </button>
-                
-                
-</div>
+                <h5 class="modal-title" id="modalAgregarEditarLabel">Agregar Película/Serie</h5>
+                </div>
                 <div class="modal-body">
-                    <!-- Aquí puedes poner los campos para agregar/editar -->
+                     Aquí puedes poner los campos para agregar/editar 
                     <input type="text" id="titulo" class="form-control" placeholder="Título">
                     <input type="text" id="director" class="form-control" placeholder="Director">
-                    
-   
-<input type="number" id="anio" class="form-control" placeholder="Año">
+                    <input type="number" id="anio" class="form-control" placeholder="Año">
                 </div>
                 <div class="modal-footer">
                     
-     
-<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" onclick="guardarPelicula()">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button id="guardarpelicula" type="button" class="btn btn-primary" >Guardar</button>
                 </div>
             </div>
         </div>
-    </div>
-
+    </div> 
+   
     
 
  
