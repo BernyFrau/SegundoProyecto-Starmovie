@@ -1,0 +1,178 @@
+<html lang="es_AR">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina de Series y Peliculas">
+  <meta name="author" content="Frau Bernardo, Fabricio Scistri, Soledad Figueroa, Distefano Paz, 
+  Lourdes Infante">
+  <meta name="keywords" content="Star-Movie">
+  <title>Administracion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
+<!--para que aparezcan los logos de facebook, instagram en el footer-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<!-- <link rel="stylesheet" href="registro.css">
+<link rel="stylesheet" href="login.css"> -->
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar bg-primary fixed-top" data-bs-theme="dark">
+      <div class="container-fluid">
+        <img class="logoImg d-none d-lg-block" src="./Navbar/1200px-STAR_Movies_logo.svg.png" alt="logoStarMovie">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorias
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Accion</a></li>
+                <li><a class="dropdown-item"  href="deportes.html">Deportes</a></li>
+                <li><a class="dropdown-item" href="comedia.html">Comedia</a></li>
+                <li><a class="dropdown-item" href="#">Ciencia Ficcion</a></li>
+                <li><a class="dropdown-item" href="#">Romance</a></li>
+                
+              </ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Configuracion
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Perfiles</a></li>
+                <li><a class="dropdown-item"  href="administracion.html">Administracion</a></li>
+                <li><a class="dropdown-item" href="">Cerar sesion</a></li>
+                
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex"   role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar pelicula" aria-label="Search">
+            <button class="btn btn-warning" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+<main>
+  <br><br><br>
+  <div class="container">
+    <h1>Administracion</h1>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarEditar">Agregar Película/Serie</button>
+
+    <div class="modal fade" id="modalAgregarEditar" tabindex="-1" role="dialog" aria-labelledby="modalAgregarEditarLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+              
+<h5 class="modal-title" id="modalAgregarEditarLabel">Agregar/Editar Película/Serie</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        
+                  
+<span aria-hidden="true">&times;</span>
+                    </button>
+                
+                
+</div>
+                <div class="modal-body">
+                    <!-- Aquí puedes poner los campos para agregar/editar -->
+                    <input type="text" id="titulo" class="form-control" placeholder="Título">
+                    <input type="text" id="director" class="form-control" placeholder="Director">
+                    
+   
+<input type="number" id="anio" class="form-control" placeholder="Año">
+                </div>
+                <div class="modal-footer">
+                    
+     
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarPelicula()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+ 
+<!-- Aquí puedes mostrar la lista de películas/series -->
+    <div id="listaPeliculas">
+        <h2>Lista de Películas/Series</h2>
+        <ul id="peliculas"></ul>
+    </div>
+    <h1>Tabla de Películas/Series</h1>
+
+  <table border="1">
+      <thead>
+          <tr>
+              <th>Código</th>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Descripción</th>
+              <th>Publicado</th>
+          </tr>
+      </thead>
+      <tbody id="tablaPeliculas">
+          <!-- Las películas/series se agregarán aquí con JavaScript -->
+      </tbody>
+
+  </table>
+</div>
+  <br><br><br>
+</main>
+<footer>
+    <div class="container-fluid bg-primary ">
+
+        <div class="row p-5 pb-2  text-white justify-content-between text-center ">
+            <div class="col-xs-12 col-md-6 col-lg-3 ">
+            <figure>
+                <a href="#">
+                    <img class="w-75 h-75 mt-5"  src="./Image/1200px-STAR_Movies_logo.svg.png" logo star movie>
+                </a>
+            </figure>
+        </div>
+            <div class=" col-xs-12 col-md-6 col-lg-3">
+            <h2>Nuestra Empresa</h2>
+            <br>
+            <p><a href="/footer/abouusindex.html" class="link-underline-dark link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Sobre nosotros</a></p>
+            <p><a href="/footer/contact.index.html" class="link-underline-dark link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Contacto</a></p>
+            <br>
+            
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            
+            <h2>LEGAL</h2>
+            <br>
+            <p><a href="error404index.html" class="link-underline-dark link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover " >Terminos de uso</a></p>
+            <p><a href="error404index.html" class="link-underline-dark link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Politica de privacidad</a></p>
+            <p><a href="error404index.html" class="link-underline-dark link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Terminos de uso de la API</a></p>
+        </div>
+            <div class="socialMedia col-xs-12 col-md-6 col-lg-3 d-flex flex-column justify-content-between d-flex  flex-column mb-3" style="height: 200px">
+            <h2>Ponte en Contacto</h2>
+                    <a href="http://www.facebook.com"><img src="https://logospng.org/download/facebook/logo-facebook-4096.png" alt="logo facebook" width="35%"></a>
+                    <a href="http://www.instagram.com"><img src="https://logospng.org/download/instagram/logo-instagram-4096.png" alt="logo instagram" width="35%"></a>
+        </div>
+
+        <div class="copyRight col-xs-12 pt-4 d-flex justify-content-center ">
+            <p>&copy;2023 <b>Star Movies</b> - Todos los Derechos Reservados</p>
+        </div>
+
+    </div>
+</footer>
+<script src="./js/apps.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
