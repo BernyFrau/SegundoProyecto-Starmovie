@@ -1,21 +1,14 @@
-* {
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
-  background-color: black;
-}
-.logoImg {
-  width: 6%;
-  margin-right: 10px;
+  background-color: #141414;
+  color: #fff;
 }
 
-h4 {
-  color: aliceblue;
-  margin: 20px;
+.btn-danger {
+  background-color: #e50914;
+  border-color: #e50914;
 }
-.fondo-pag {
-  background-image: ;
+
+.btn-danger:hover {
+  background-color: #ff0000;
+  border-color: #ff0000;
 }
