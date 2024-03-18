@@ -168,7 +168,9 @@ margin-right: 10px;
       width: 100%; /* En dispositivos móviles, ocupa todo el ancho */
   }
 }
-
+.tablaadministracion{
+  background-color: white;
+}
 main {
   background-image: url('https://1.bp.blogspot.com/-VbR_wNi4rd0/Ujelxl5LecI/AAAAAAAAMHA/vy_jsx9KVK8/s1600/Descargar+Pack+Increibles+fotos+de+vehiculos+HD+%25284%2529.jpg'); 
   background-size: cover; /* Ajusta el tamaño de la imagen para que cubra todo el fondo */

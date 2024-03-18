@@ -75,10 +75,23 @@
                 <h5 class="modal-title" id="modalAgregarEditarLabel">Agregar Película/Serie</h5>
                 </div>
                 <div class="modal-body">
-                     Aquí puedes poner los campos para agregar/editar 
+                     <!-- Aquí puedes poner los campos para agregar/editar  -->
                     <input type="text" id="titulo" class="form-control" placeholder="Título">
                     <input type="text" id="director" class="form-control" placeholder="Director">
                     <input type="number" id="anio" class="form-control" placeholder="Año">
+                    <select id="categoria" class="form-select" aria-label="Default select example">
+                      <option selected>Categoria</option>
+                      <option value="destacados">Destacados</option>
+                      <option value="comedia">Comedia</option>
+                      <option value="deportes">Deportes</option>
+                      <option value="accion">Accion</option>
+                      <option value="para los mas chicos">Para los mas chicos</option>
+                    </select>
+                 
+                      <textarea class="form-control" placeholder="Descripción" id="descripcion"></textarea>
+                     
+                 
+                    <input type="text" id="publicado" class="form-control" placeholder="publicado">
                 </div>
                 <div class="modal-footer">
                     
@@ -88,18 +101,19 @@
             </div>
         </div>
     </div> 
+
    
     
 
  
 <!-- Aquí puedes mostrar la lista de películas/series -->
-    <div id="listaPeliculas">
+    <div class="tablaadministracion"  id="listaPeliculas">
         <h2>Lista de Películas/Series</h2>
         <ul id="peliculas"></ul>
     </div>
     <h1>Tabla de Películas/Series</h1>
 
-  <table border="1">
+  <table class="tablaadministracion" border="1">
       <thead>
           <tr>
               <th>Código</th>
