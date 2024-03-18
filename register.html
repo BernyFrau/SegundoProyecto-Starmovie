@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es_AR">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina de Series y Peliculas">
+  <meta name="author" content="Frau Bernardo, Fabricio Scistri, Soledad Figueroa, Distefano Paz, 
+  Lourdes Infante">
+  <meta name="keywords" content="Star-Movie">
+  <title>Star Movie</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+<!--para que aparezcan los logos de facebook, instagram en el footer-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"><!
+<link rel="stylesheet" href="registro.css">
+<link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar bg-primary fixed-top" data-bs-theme="dark">
+      <div class="container-fluid">
+        <img class="logoImg d-none d-lg-block" src="./Image/1200px-STAR_Movies_logo.svg.png" alt="logoStarMovie">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html" target="_blank">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="login.html" target="_blank">Login</a>
+            </li>
+           
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar pelicula" aria-label="Search">
+            <button class="btn btn-warning" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="d-flex justify-content-center my-5">
+      <form class="w-25">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Usuario</label>
+          <input type="text" class="form-control" id="IdUser" aria-describedby="emailHelp" name="user">
+          <div id="divErrorUser" class="form-text text-danger">Campo vacio.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="IdPass" name="Pass">
+          <div id="divErrorPass" class="form-text text-danger">Campo vacio.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Repetir Contraseña</label>
+          <input type="password" class="form-control" id="IdRPass" name="RPass">
+          <div id="divErrorRPass" class="form-text text-danger">Campo vacio.</div>
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Acepto los terminos y condiciones.</label>
+        </div>
+        <button type="submit" class="btn btn-primary " id="idSendForm">Registrarme</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="container-fluid bg-primary">
+
+        <div class="row p-5 pb-2  text-white justify-content-between text-center ">
+            <div class="col-xs-12 col-md-6 col-lg-3 ">
+            <figure>
+                <a href="#">
+                    <img class="w-75 h-75 mt-5"  src="./Image/1200px-STAR_Movies_logo.svg.png" logo star movie>
+                </a>
+            </figure>
+        </div>
+            <div class=" col-xs-12 col-md-6 col-lg-3">
+            <h2>Nuestra Empresa</h2>
+            <br>
+            <p><a href="/footer/abouusindex.html" class="link-underline-dark link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Sobre nosotros</a></p>
+            <p><a href="/footer/contact.index.html" class="link-underline-dark link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Contacto</a></p>
+            <br>
+            
+        </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-3">
+            
+            <h2>LEGAL</h2>
+            <br>
+            <p><a href="error404index.html" class="link-underline-dark link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover " >Terminos de uso</a></p>
+            <p><a href="error404index.html" class="link-underline-dark link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Politica de privacidad</a></p>
+            <p><a href="error404index.html" class="link-underline-dark link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Terminos de uso de la API</a></p>
+        </div>
+            <div class="socialMedia col-xs-12 col-md-6 col-lg-3 d-flex flex-column justify-content-between d-flex  flex-column mb-3" style="height: 200px">
+            <h2>Ponte en Contacto</h2>
+                    <a href="http://www.facebook.com"><i class="fa-brands fa-facebook "></i></a>
+                    <a href="http://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="http://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+        <div class="copyRight col-xs-12 pt-4 d-flex justify-content-center ">
+            <p>&copy;2023 <b>Star Movies</b> - Todos los Derechos Reservados</p>
+        </div>
+
+    </div>
+</footer>
+<script src="Register-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
